@@ -69,6 +69,7 @@ const Checkout = () => {
   };
 
   const postToken = useEffect(() => {
+    console.log(token.nonce);
     async function postToken() {
       await fetch(
         "http://localhost:8080/token",
@@ -78,7 +79,7 @@ const Checkout = () => {
             "Content-Type": "application/x-www-form-urlencoded",
           },
           method: "POST",
-          body: JSON.stringify(token.nonce),
+          body: token.nonce,
         }
       );
     }

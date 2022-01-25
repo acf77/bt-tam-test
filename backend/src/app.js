@@ -22,14 +22,13 @@ const gateway = new braintree.BraintreeGateway({
 });
 
 app.post("/token", (req, res) => {
-  const token = Object.keys(req.body);
-  const clearToken = JSON.parse(token);
-  console.log(clearToken);
+  const token = String(Object.keys(req.body));
+  console.log(token);
 
   gateway.transaction.sale(
     {
       amount: "199.00",
-      paymentMethodNonce: clearToken,
+      paymentMethodNonce: token,
       // deviceData: deviceDataFromTheClient,
       options: {
         submitForSettlement: true,
