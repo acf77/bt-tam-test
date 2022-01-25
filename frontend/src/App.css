@@ -1,0 +1,36 @@
+.flex-container {
+  display: flex;
+  margin: auto;
+  width: 50%;
+  border-color: #828282;
+  padding: 20px;
+}
+
+.flex-left {
+  padding: 20px;
+}
+
+HostedField {
+  border-width: 3px;
+  border-color: black;
+}
+
+.nofocus {
+  background-color: #fafafa;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #828282;
+  height: 40px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.focused {
+  background-color: #bcfcab;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #828282;
+  height: 40px;
+  width: auto;
+  margin-bottom: 20px;
+}
